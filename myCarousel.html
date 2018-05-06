@@ -60,6 +60,9 @@
   	.bulet:last-child{
 		margin-right: 0;
   	}
+  	.boxBulets{
+  		text-align: center;
+  	}
   </style>
 </head>
 <body>
@@ -109,7 +112,10 @@
 		
 //Bulets
 		var ul = document.createElement('UL');
+		var div = document.createElement('DIV');
 		ul.className = 'bulets';
+		div.className = 'boxBulets';
+
 
 		for(var i=0; i<listElem.length; i++){
 			var li = document.createElement('LI');
@@ -118,7 +124,8 @@
 			// alert('hello');
 		}
 
-		carousel.appendChild(ul);
+		div.appendChild(ul);
+		carousel.appendChild(div);
 		// console.log(ul);
 	</script>
 </html>
